@@ -1,0 +1,289 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  /* font-size 1em = 10px on default browser settings */
+}
+
+/* apppp */
+.App {
+  /* background-image: url('./vutru.jpg'); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.formBody2 {
+  margin-left: 30px;
+}
+
+.name-component {
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.footer {
+  margin: 30px auto;
+  font-size: 12px;
+}
+
+.body-home {
+  /* border: 1px solid red; */
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.body-mid {
+  /* border: 1px solid red; */
+  font-size: 12px;
+  padding: 40px;
+  background-color: #e5dada;
+  border-radius: 10px;
+}
+
+.container-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  margin-top: 20px;
+}
+
+.container-btn:hover {
+  opacity: 0.8;
+
+}
+
+.result {
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  border: 1px solid rgb(172, 158, 158);
+  width: 90%;
+  margin: 0 auto;
+}
+
+.list {
+  width: 100%;
+}
+
+.list-item {
+  display: flex;
+  width: 100%;
+  border: 1px solid #b5b5b5;
+  padding: 10px 0px;
+  border-radius: 10px;
+
+}
+
+.title_list {
+  margin: 10px 0;
+  padding: 10px;
+  color: #ad3718;
+  background-color: #fae5e5;
+  font-size: 17px;
+
+}
+
+.item {
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* itemIndex */
+.itemIndex {
+  border-radius: 6px;
+  padding: 5px 10px;
+  /* border: 1px solid red; */
+  background-color: #94c266;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 500;
+  width: 120px;
+  margin-top: 10px;
+}
+
+/* imgTopTower */
+.pyramid {
+  width: 100%;
+}
+
+.imgTopTower {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.chiso {
+  font-size: 12px;
+}
+
+.infoChiso1 {
+  position: absolute;
+  top: 42%;
+  left: 35%;
+}
+
+.infoChiso2 {
+  position: absolute;
+  top: 38%;
+  left: 58%;
+}
+
+.infoChiso3 {
+  position: absolute;
+  top: 22%;
+  left: 40%;
+}
+
+.infoChiso4 {
+  position: absolute;
+  top: 8%;
+  left: 53%;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formInput {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inputValue {
+  border: 1px solid black;
+  width: 50px;
+  height: 20px;
+  padding: 12px;
+  outline: none;
+  margin-left: 6px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  
+}
+
+.inputValue2 {
+  border: 1px solid black;
+  font-weight: 500;
+  width: 90px;
+  height: 30px;
+  padding: 0 16px;
+
+}
+
+.btn {
+  color: #fff;
+  background-color: #ff3333;
+  padding: 8px 18px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.img-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(0deg, blue, rgb(169, 217, 236));
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
+}
+
+.loading::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.formBody {
+  display: flex;
+}
+.imgContain{
+  margin:10px 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: center;
+}
+.imgCotain__{
+  display: flex;
+  justify-content: center;
+  width: 100px;
+}
+.imgHeader
+{
+  border: 1px solid #ff3333;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+}

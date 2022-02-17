@@ -1,0 +1,82 @@
+/* pc */
+@media (min-width:1024px)
+{
+    
+}
+/* mobile and tablet */
+@media (max-width:1023px)
+{
+    .list-item{
+        flex-wrap: wrap;
+        justify-content: center ;
+    }
+    .formBody{
+        display: block;
+      }
+    .formBody2
+    {
+        margin-right: 10px;
+        margin-left: 0;
+    }
+    
+}
+/* tablet */
+@media (min-width:740px) and (max-width:1023px)
+{
+    .infoChiso1{
+        position: absolute;
+        top: 42%;
+        left: 26%;
+      }
+      .infoChiso2{
+        position: absolute;
+        top: 38%;
+        left: 62%;
+      }
+      .infoChiso3{
+        position: absolute;
+        top: 22%;
+        left: 32%;
+      }
+      .infoChiso4{
+        position: absolute;
+        top:8%;
+        left: 53%;
+      }
+}
+/* mobile */
+@media (max-width:739px)
+{
+    .infoChiso1{
+        position: absolute;
+        top: 42%;
+        left: 4%;
+      }
+      .infoChiso2{
+        position: absolute;
+        top: 38%;
+        left: 72%;
+      }
+      .infoChiso3{
+        position: absolute;
+        top: 22%;
+        left: 20%;
+      }
+      .infoChiso4{
+        position: absolute;
+        top:8%;
+        left: 53%;
+      }
+    
+      .body-mid {
+        /* border: 1px solid red; */
+        font-size: 12px;
+        padding: 20px;
+        background-color: #e5dada;
+        border-radius: 10px;
+        width: 100%;
+      }
+      .body-home{
+          width: 74%;
+      }
+}
