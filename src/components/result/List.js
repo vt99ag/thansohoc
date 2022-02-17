@@ -1,5 +1,6 @@
 import React from 'react'
 import Item from './Item'
+import ItemLife from './ItemLife'
 import ItemRepeat from './ItemRepeapt'
 const List = ({ obj, title }) => {
   return (
@@ -10,6 +11,8 @@ const List = ({ obj, title }) => {
           Object.keys(obj).map((key, index) => {
             if (key === "soLap") {
               return <ItemRepeat  key={index}  name="Số lặp" soLap={obj[key]} />
+            } if (key === "top") {
+              return <ItemLife  key={index}  name="Chặng đường đời" life={obj[key]} />
             } else { 
               return <Item name={key} index={index} key={index} value={obj[key]} />
             }

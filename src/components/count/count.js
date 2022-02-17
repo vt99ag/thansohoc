@@ -136,7 +136,7 @@ function countYear(d, m, y) {
 
 function countTop(d, m, y) {
     let dinh1 = 36 - countLife(d, m, y)
-    const i = { dinh1: dinh1, dinh2: dinh1 + 9, dinh3: dinh1 + 9 + 9, dinh4: dinh1 + 9 + 9 + 9 }
+    const i = [dinh1, dinh1 + 9, dinh1 + 9 + 9, dinh1 + 9 + 9 + 9]
     return i
 }
 function countIndexTop(d, m, y) {

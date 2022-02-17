@@ -92,6 +92,7 @@ html {
   border: 1px solid #b5b5b5;
   padding: 10px 0px;
   border-radius: 10px;
+  flex-wrap: wrap;
 
 }
 

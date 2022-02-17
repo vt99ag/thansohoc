@@ -24,30 +24,31 @@ const Result = ({ info }) => {
     const obj1 = {
         soNoiCam: countIntrospective(name),
         soNoiTam: countInner(name),
-        tuongTac: countInteraction(name),
-        thaiDo: countAttitude(dayBirthDay, monthBirthDay),
     }
     const obj2 = {
-        noiTamVaTuongTac: countNTTT(name),
-        // soLap : 99,
-        soTruongThanh: countMature(name, dayBirthDay, monthBirthDay, yearBirthDay),
-        soBoSung: countComplementary(name)
-
+        soLap: countRepeat(name, dayBirthDay, monthBirthDay, yearBirthDay),
+        thaiDo: countAttitude(dayBirthDay, monthBirthDay),
+        tuongTac: countInteraction(name),
     }
     const obj3 = {
+        soTruongThanh: countMature(name, dayBirthDay, monthBirthDay, yearBirthDay),
+        soBoSung: countComplementary(name),
+        noiTamVaTuongTac: countNTTT(name),
+    }
+    const obj4 = {
         suMenh: countMission(name),
         duongDoi: countLife(dayBirthDay, monthBirthDay, yearBirthDay),
-        suMenhVaDuongDoi: countSMDD(name, dayBirthDay, monthBirthDay, yearBirthDay),
         namCaNhan: countYear(dayBirthDay, monthBirthDay, yearNow),
         thangCaNhan: countMonth(dayBirthDay, monthBirthDay, yearNow, monthNow),
         ngayCaNhan: countDate(dayBirthDay, monthBirthDay, yearNow, monthNow, dateNow),
-    }
-    const obj4 = {
-        soNgaySinh: countDay(dayBirthDay),
-        soLap: countRepeat(name, dayBirthDay, monthBirthDay, yearBirthDay)
+        top: countTop(dayBirthDay, monthBirthDay, yearBirthDay)
     }
 
-    const top = countTop(dayBirthDay, monthBirthDay, yearBirthDay);
+    const obj5 = {
+        soNgaySinh: countDay(dayBirthDay), suMenhVaDuongDoi: countSMDD(name, dayBirthDay, monthBirthDay, yearBirthDay),
+        suMenhVaDuongDoi: countSMDD(name, dayBirthDay, monthBirthDay, yearBirthDay)
+    }
+
     const indexTop = countIndexTop(dayBirthDay, monthBirthDay, yearBirthDay);
     return (
         <div className='result'>
@@ -56,43 +57,35 @@ const Result = ({ info }) => {
                 <p style={{ fontSize: "16px" }}>Ngày sinh : <span style={{ marginLeft: "10px", fontWeight: "500" }}>{birthDay}</span></p>
             </div>
             <div className='list'>
-                <List title="1.Thấu hiểu bản thân" obj={obj1} />
+                <List title="1.Thế giới bên trong" obj={obj1} />
                 <ChiSo name="Chỉ số nội cảm" data={arrayNoiCam} value={obj1.soNoiCam} />
                 <ChiSo name="Chỉ số nội tâm" data={arrayNoiTam} value={obj1.soNoiTam} />
-                <ChiSo name="Chỉ số thái độ" data={arrayThaiDo} value={obj1.thaiDo} />
-                <ChiSo name="Chỉ số tương tác" data={arrayTuongTac} value={obj1.tuongTac} />
-
-                <List title="2.Phát triển bản thân" obj={obj2} />
-                <ChiSo name="Chỉ số trưởng thành" data={arrayTruongThanh} value={obj2.soTruongThanh} />
-
-                <List title="3.Nhiệm vụ xã hội và hành trình" obj={obj3} />
-                <ChiSo name="Chỉ số sứ mệnh" data={arrayDinhMenh} value={obj3.suMenh} />
-                <ChiSo name="Chỉ số đường đời" data={arrayDuongDoi} value={obj3.duongDoi} />
-                <ChiSo name="Chỉ số ngày cá nhân" data={arrayNgayCaNhan} value={obj3.ngayCaNhan} />
-                <ChiSo name="Chỉ số tháng cá nhân" data={arrayThangCaNhan} value={obj3.thangCaNhan} />
-                <ChiSo name="Chỉ số năm cá nhân" data={arrayNamCaNhan} value={obj3.namCaNhan} />
-                <div className='pyramid'>
-                    <h1 className='title_list'>Số chặng đường đời</h1>
-                    <div className='imgTopTower'>
-                        <img src={imgIcom} />
-                        <span className='chiso infoChiso1'><span style={{ color: "#f00" }}>{top.dinh1}</span> tuổi - <span style={{ color: "#cc0000" }}><b>Số {indexTop.dinh1}</b></span></span>
-                        <span className='chiso infoChiso2'><span style={{ color: "#f00" }}>{top.dinh2}</span> tuổi - <span style={{ color: "#cc0000" }}><b>Số {indexTop.dinh2}</b></span></span>
-                        <span className='chiso infoChiso3'><span style={{ color: "#f00" }}>{top.dinh3}</span> tuổi - <span style={{ color: "#cc0000" }}><b>Số {indexTop.dinh3}</b></span></span>
-                        <span className='chiso infoChiso4'><span style={{ color: "#f00" }}>{top.dinh4}</span> tuổi - <span style={{ color: "#cc0000" }}><b>Số {indexTop.dinh4}</b></span></span>
-                    </div>
-                </div>
-
-                <ChiSo name="Chặng đường đời đỉnh 1" data={arrayChangDuongDoi} value={indexTop.dinh1} />
-                <ChiSo name="Chặng đường đời đỉnh 2" data={arrayChangDuongDoi} value={indexTop.dinh2} />
-                <ChiSo name="Chặng đường đời đỉnh 3" data={arrayChangDuongDoi} value={indexTop.dinh3} />
-                <ChiSo name="Chặng đường đời đỉnh 4" data={arrayChangDuongDoi} value={indexTop.dinh4} />
 
 
-                <List title="4.Nguồn lực" obj={obj4} />
-                <ChiSo name="Chỉ số ngày sinh" data={arrayNgaySinh} value={obj4.soNgaySinh} />
-               
+                <List title="2.Thế giới bên ngoài" obj={obj2} />
+                <ChiSo name="Chỉ số thái độ" data={arrayThaiDo} value={obj2.thaiDo} />
+                <ChiSo name="Chỉ số tương tác" data={arrayTuongTac} value={obj2.tuongTac} />
 
-                
+
+
+                <List title="3.Phát triển bản thân" obj={obj3} />
+                <ChiSo name="Chỉ số trưởng thành" data={arrayTruongThanh} value={obj3.soTruongThanh} />
+
+                <List title="4.Hành trình" obj={obj4} />
+                <ChiSo name="Chỉ số sứ mệnh" data={arrayDinhMenh} value={obj4.suMenh} />
+                <ChiSo name="Chỉ số đường đời" data={arrayDuongDoi} value={obj4.duongDoi} />
+                <ChiSo name="Chỉ số ngày cá nhân" data={arrayNgayCaNhan} value={obj4.ngayCaNhan} />
+                <ChiSo name="Chỉ số tháng cá nhân" data={arrayThangCaNhan} value={obj4.thangCaNhan} />
+                <ChiSo name="Chỉ số năm cá nhân" data={arrayNamCaNhan} value={obj4.namCaNhan} />
+                <ChiSo name="Chặng đường đời 1" data={arrayChangDuongDoi} value={indexTop.dinh1} />
+                <ChiSo name="Chặng đường đời 2" data={arrayChangDuongDoi} value={indexTop.dinh2} />
+                <ChiSo name="Chặng đường đời 3" data={arrayChangDuongDoi} value={indexTop.dinh3} />
+                <ChiSo name="Chặng đường đời 4" data={arrayChangDuongDoi} value={indexTop.dinh4} />
+
+                <List title="Nguồn lực hỗ trợ" obj={obj5} />
+                <ChiSo name="Chỉ số ngày sinh" data={arrayNgaySinh} value={obj5.soNgaySinh} />
+
+
             </div>
         </div>
     )
