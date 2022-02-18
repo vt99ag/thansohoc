@@ -17,7 +17,7 @@ const ItemRepeat = ({ name, soLap }) => {
         }
     })
     return (
-        <div className='item' style={{ flexDirection: "row", display: "flex" }}>
+        <div className='itemRepeat' style={{ flexDirection: "row", display: "flex" }}>
             {body}
         </div>
     )

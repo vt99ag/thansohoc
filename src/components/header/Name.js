@@ -5,7 +5,7 @@ const Header = () => {
           color:"#CC0000",
           fontSize:"18px",
         }}>
-          Tra cứu thần số học
+          Ứng dụng số học pytago
         </h3>
         <i style={{fontSize:"14px"}}>Khám phá bản thân thông qua những con số</i>
     </div>

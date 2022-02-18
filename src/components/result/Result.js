@@ -41,7 +41,11 @@ const Result = ({ info }) => {
         namCaNhan: countYear(dayBirthDay, monthBirthDay, yearNow),
         thangCaNhan: countMonth(dayBirthDay, monthBirthDay, yearNow, monthNow),
         ngayCaNhan: countDate(dayBirthDay, monthBirthDay, yearNow, monthNow, dateNow),
-        top: countTop(dayBirthDay, monthBirthDay, yearBirthDay)
+        top: [countTop(dayBirthDay, monthBirthDay, yearBirthDay)[0],countIndexTop(dayBirthDay, monthBirthDay, yearBirthDay)[0],
+        countTop(dayBirthDay, monthBirthDay, yearBirthDay)[1],countIndexTop(dayBirthDay, monthBirthDay, yearBirthDay)[1],
+        countTop(dayBirthDay, monthBirthDay, yearBirthDay)[2],countIndexTop(dayBirthDay, monthBirthDay, yearBirthDay)[2],
+        countTop(dayBirthDay, monthBirthDay, yearBirthDay)[3],countIndexTop(dayBirthDay, monthBirthDay, yearBirthDay)[3],        
+    ] 
     }
 
     const obj5 = {
@@ -58,32 +62,28 @@ const Result = ({ info }) => {
             </div>
             <div className='list'>
                 <List title="1.Thế giới bên trong" obj={obj1} />
+                <List title="2.Thế giới bên ngoài" obj={obj2} />
+                <List title="3.Phát triển bản thân" obj={obj3} />
+                <List title="4.Hành trình" obj={obj4} />
+                <List title="5.Nguồn lực hỗ trợ" obj={obj5} />
+                
                 <ChiSo name="Chỉ số nội cảm" data={arrayNoiCam} value={obj1.soNoiCam} />
                 <ChiSo name="Chỉ số nội tâm" data={arrayNoiTam} value={obj1.soNoiTam} />
-
-
-                <List title="2.Thế giới bên ngoài" obj={obj2} />
                 <ChiSo name="Chỉ số thái độ" data={arrayThaiDo} value={obj2.thaiDo} />
                 <ChiSo name="Chỉ số tương tác" data={arrayTuongTac} value={obj2.tuongTac} />
-
-
-
-                <List title="3.Phát triển bản thân" obj={obj3} />
                 <ChiSo name="Chỉ số trưởng thành" data={arrayTruongThanh} value={obj3.soTruongThanh} />
-
-                <List title="4.Hành trình" obj={obj4} />
                 <ChiSo name="Chỉ số sứ mệnh" data={arrayDinhMenh} value={obj4.suMenh} />
                 <ChiSo name="Chỉ số đường đời" data={arrayDuongDoi} value={obj4.duongDoi} />
                 <ChiSo name="Chỉ số ngày cá nhân" data={arrayNgayCaNhan} value={obj4.ngayCaNhan} />
                 <ChiSo name="Chỉ số tháng cá nhân" data={arrayThangCaNhan} value={obj4.thangCaNhan} />
                 <ChiSo name="Chỉ số năm cá nhân" data={arrayNamCaNhan} value={obj4.namCaNhan} />
-                <ChiSo name="Chặng đường đời 1" data={arrayChangDuongDoi} value={indexTop.dinh1} />
-                <ChiSo name="Chặng đường đời 2" data={arrayChangDuongDoi} value={indexTop.dinh2} />
-                <ChiSo name="Chặng đường đời 3" data={arrayChangDuongDoi} value={indexTop.dinh3} />
-                <ChiSo name="Chặng đường đời 4" data={arrayChangDuongDoi} value={indexTop.dinh4} />
-
-                <List title="Nguồn lực hỗ trợ" obj={obj5} />
+                <ChiSo name="Chặng đường đời 1" data={arrayChangDuongDoi} value={indexTop[0]} />
+                <ChiSo name="Chặng đường đời 2" data={arrayChangDuongDoi} value={indexTop[1]} />
+                <ChiSo name="Chặng đường đời 3" data={arrayChangDuongDoi} value={indexTop[2]} />
+                <ChiSo name="Chặng đường đời 4" data={arrayChangDuongDoi} value={indexTop[3]} />
                 <ChiSo name="Chỉ số ngày sinh" data={arrayNgaySinh} value={obj5.soNgaySinh} />
+
+                
 
 
             </div>

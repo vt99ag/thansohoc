@@ -120,6 +120,10 @@ function countIntrospective(value) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] == max) {
             retrun.push(i + 1)
+            retrun.push(",")
+        }
+        if (i == array.length -1 && retrun.length > 1) {
+            retrun.pop(retrun.length - 1)
         }
     }
 
@@ -150,7 +154,7 @@ function countIndexTop(d, m, y) {
     if (dinh4 > 11) {
         dinh4 = sumDigitsDate(dinh4)
     }
-    const i = { dinh1: dinh1, dinh2: dinh2, dinh3: dinh3, dinh4: dinh4 }
+    const i = [ dinh1, dinh2, dinh3, dinh4 ]
     return i
 }
 
@@ -225,7 +229,10 @@ function countComplementary(value) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] == 0) {
             retrun.push(i + 1)
-            retrun.push(" ")
+            retrun.push(",")
+        }
+        if (i == array.length - 1 && retrun.length > 1) {
+            retrun.pop(retrun.length - 1)
         }
     }
     return retrun

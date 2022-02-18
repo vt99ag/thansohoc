@@ -13,7 +13,7 @@ const List = ({ obj, title }) => {
               return <ItemRepeat  key={index}  name="Số lặp" soLap={obj[key]} />
             } if (key === "top") {
               return <ItemLife  key={index}  name="Chặng đường đời" life={obj[key]} />
-            } else { 
+            }else { 
               return <Item name={key} index={index} key={index} value={obj[key]} />
             }
           })

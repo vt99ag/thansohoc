@@ -288,3 +288,21 @@ html {
   overflow: hidden;
   width: 100px;
 }
+
+.itemLife{
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.itemRepeat{
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
