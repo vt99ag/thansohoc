@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Form = ({ setShow, setFullInfo }) => {
   const [fullName, setFullName] = useState({})
@@ -7,7 +7,7 @@ const Form = ({ setShow, setFullInfo }) => {
   let nameSuccess = '';
   let birthDaySuccess = '';
   let birthDaySuccess2 = '';
-  let idSettimeOut= null;
+  let idSettimeOut = null;
   Object.values(fullName).forEach((str) => {
     return nameSuccess += str;
   });
@@ -29,7 +29,7 @@ const Form = ({ setShow, setFullInfo }) => {
   const handleChangeName = (e) => {
     // console.log(e.target.value);
     let countStep = Number(e.target.getAttribute("data-name")) + 1
-    if (e.target.value !== '' && countStep <= 18) {
+    if (e.target.value !== '' && countStep <= 26) {
       let inputFocus = document.querySelector(`input[data-name='${countStep}']`)
       // console.log(inputFocus);
       inputFocus.focus()
@@ -81,20 +81,19 @@ const Form = ({ setShow, setFullInfo }) => {
 
 
   }
-  
+
   const hanleSubmit = (e) => {
     e.preventDefault();
-    
-    if(nameSuccess!==''&& birthDaySuccess2.length == 10 )
-    {
-      
+
+    if (nameSuccess !== '' && birthDaySuccess2.length == 10) {
+
       setFullInfo({
-      nameSuccess,
-      birthDaySuccess2,
+        nameSuccess,
+        birthDaySuccess2,
       })
       setShow(true);
     }
-    else{
+    else {
       // console.log("....vao")
       setShowInfo("Vui lòng nhập đầy đủ thông tin")
       // idSettimeOut = setTimeout(() => {
@@ -135,6 +134,14 @@ const Form = ({ setShow, setFullInfo }) => {
           <input className="inputValue" onKeyDown={changeName} type="text" data-name='16' maxLength={1} onChange={handleChangeName} name='inputName' />
           <input className="inputValue" onKeyDown={changeName} type="text" data-name='17' maxLength={1} onChange={handleChangeName} name='inputName' />
           <input className="inputValue" onKeyDown={changeName} type="text" data-name='18' maxLength={1} onChange={handleChangeName} name='inputName' />
+          <input className="inputValue" onKeyDown={changeName} type="text" data-name='19' maxLength={1} onChange={handleChangeName} name='inputName' />
+          <input className="inputValue" onKeyDown={changeName} type="text" data-name='20' maxLength={1} onChange={handleChangeName} name='inputName' />
+          <input className="inputValue" onKeyDown={changeName} type="text" data-name='21' maxLength={1} onChange={handleChangeName} name='inputName' />
+          <input className="inputValue" onKeyDown={changeName} type="text" data-name='22' maxLength={1} onChange={handleChangeName} name='inputName' />
+          <input className="inputValue" onKeyDown={changeName} type="text" data-name='23' maxLength={1} onChange={handleChangeName} name='inputName' />
+          <input className="inputValue" onKeyDown={changeName} type="text" data-name='24' maxLength={1} onChange={handleChangeName} name='inputName' />
+          <input className="inputValue" onKeyDown={changeName} type="text" data-name='25' maxLength={1} onChange={handleChangeName} name='inputName' />
+          <input className="inputValue" onKeyDown={changeName} type="text" data-name='26' maxLength={1} onChange={handleChangeName} name='inputName' />
         </div>
         <br />
         <label>
