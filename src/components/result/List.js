@@ -6,7 +6,7 @@ const List = ({ obj, title }) => {
   return (
     <div className='list'>
       <h1 className='title_list'> {title}</h1>
-      <ul className='list-item'>
+      <ul className='list-item'>    
         {
           Object.keys(obj).map((key, index) => {
             if (key === "soLap") {
