@@ -2,10 +2,8 @@ import React from 'react'
 
 const ItemLife = ({ name, life }) => {
     let i = 0
-    console.log(life)
     const body = life.map((vl, index) => {
         if (vl > 1) {
-            console.log(vl)
             if (index === 0 || index === 2 || index === 4 || index === 6) {
                 const check = (i % 2) !== 0
                 let style = {}
