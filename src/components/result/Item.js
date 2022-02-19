@@ -56,7 +56,7 @@ const Item = ({ name, index, value }) => {
     }
     if (name === "suMenhVaDuongDoi") {
 
-      newName = "Chỉ số kết nôi Sứ mệnh và đường đời"
+      newName = "Chỉ số kết nối Sứ mệnh và đường đời"
 
     }
     if (name === "soNgaySinh") {
