@@ -188,7 +188,7 @@ const Form = ({ setShow, setFullInfo }) => {
           <button onClick={hanleSubmit} className="btn" type="submit">
             <span className='img-search'>
               <img width='20' height='20' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png' />
-            </span> <b>Xem thần số của bạn</b></button>
+            </span> <b>Tra cứu</b></button>
         </div>
       </form>
     </div>

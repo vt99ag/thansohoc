@@ -31,7 +31,7 @@ const Item = ({ name, index, value }) => {
     }
     if (name === "noiTamVaTuongTac") {
 
-      newName = "Nội tâm và tương tác"
+      newName = "Chỉ số kết nối Nội tâm và tương tác"
 
     }
     if (name === "soLap") {
@@ -56,7 +56,7 @@ const Item = ({ name, index, value }) => {
     }
     if (name === "suMenhVaDuongDoi") {
 
-      newName = "Sứ mệnh và đường đời"
+      newName = "Chỉ số kết nôi Sứ mệnh và đường đời"
 
     }
     if (name === "soNgaySinh") {
